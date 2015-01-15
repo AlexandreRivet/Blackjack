@@ -18,7 +18,7 @@
     myLabel.fontSize = 65;
     myLabel.fontColor = [UIColor blackColor];
     myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                   CGRectGetMidY(self.frame));
+                                            CGRectGetHeight(self.frame)/3 * 2);
     
     [self addChild:myLabel];
     
@@ -28,9 +28,22 @@
     self._buttonPlay.fontSize = 65;
     self._buttonPlay.fontColor = [UIColor redColor];
     self._buttonPlay.position = CGPointMake(CGRectGetMidX(self.frame),
-                                   CGRectGetHeight(self.frame)/3);
+                                   CGRectGetMidY(self.frame));
+    
     
     [self addChild:self._buttonPlay];
+    
+    
+    self._buttonQuit = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    
+    self._buttonQuit.text = @"Exit";
+    self._buttonQuit.fontSize = 32;
+    self._buttonQuit.fontColor = [UIColor redColor];
+    self._buttonQuit.position = CGPointMake(CGRectGetMidX(self.frame),
+                                            CGRectGetHeight(self.frame)/3);
+    
+    
+    [self addChild:self._buttonQuit];
     
     //Création d'un sprite qui tourne
     NSArray *sprites = [[NSArray alloc	] init];
@@ -87,6 +100,10 @@
         
         if(CGRectContainsPoint(self._buttonPlay.frame, location)) {
             // do whatever for first menu
+        }
+        else if(CGRectContainsPoint(self._buttonQuit.frame, location)) {
+            // do whatever for first menu
+            exit(0);
         }
         else
         {

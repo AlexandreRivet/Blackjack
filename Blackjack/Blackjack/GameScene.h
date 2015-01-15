@@ -10,4 +10,5 @@
 
 @interface GameScene : SKScene
 @property() SKLabelNode* _buttonPlay;
+@property() SKLabelNode* _buttonQuit;
 @end
