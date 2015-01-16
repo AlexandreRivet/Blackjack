@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE115FAB1A69B80C00B53E0C /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE115FAA1A69B80C00B53E0C /* PlayerModel.m */; };
+		EE115FAE1A69C14A00B53E0C /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = EE115FAD1A69C14A00B53E0C /* Player.m */; };
+		EE115FB11A69C16300B53E0C /* Dealer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE115FB01A69C16300B53E0C /* Dealer.m */; };
 		EEB250651A66F952004BE1BA /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB250611A66F952004BE1BA /* Card.m */; };
 		EEB250661A66F952004BE1BA /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB250631A66F952004BE1BA /* Deck.m */; };
 		EEB250691A66F968004BE1BA /* Hand.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB250681A66F968004BE1BA /* Hand.m */; };
@@ -32,6 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE115FA91A69B80C00B53E0C /* PlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerModel.h; sourceTree = "<group>"; };
+		EE115FAA1A69B80C00B53E0C /* PlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerModel.m; sourceTree = "<group>"; };
+		EE115FAC1A69C14A00B53E0C /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		EE115FAD1A69C14A00B53E0C /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		EE115FAF1A69C16300B53E0C /* Dealer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dealer.h; sourceTree = "<group>"; };
+		EE115FB01A69C16300B53E0C /* Dealer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dealer.m; sourceTree = "<group>"; };
 		EEB250611A66F952004BE1BA /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		EEB250621A66F952004BE1BA /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		EEB250631A66F952004BE1BA /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
@@ -101,6 +110,12 @@
 				EEB250631A66F952004BE1BA /* Deck.m */,
 				EEB250681A66F968004BE1BA /* Hand.m */,
 				EEB250641A66F952004BE1BA /* Hand.h */,
+				EE115FA91A69B80C00B53E0C /* PlayerModel.h */,
+				EE115FAA1A69B80C00B53E0C /* PlayerModel.m */,
+				EE115FAC1A69C14A00B53E0C /* Player.h */,
+				EE115FAD1A69C14A00B53E0C /* Player.m */,
+				EE115FAF1A69C16300B53E0C /* Dealer.h */,
+				EE115FB01A69C16300B53E0C /* Dealer.m */,
 				EEFD742F1A66F63E00D197F4 /* AppDelegate.h */,
 				EEFD74301A66F63E00D197F4 /* AppDelegate.m */,
 				EEFD74321A66F63E00D197F4 /* GameScene.h */,
@@ -247,8 +262,11 @@
 				EEB250691A66F968004BE1BA /* Hand.m in Sources */,
 				EEFD74391A66F63E00D197F4 /* GameViewController.m in Sources */,
 				EEFD74311A66F63E00D197F4 /* AppDelegate.m in Sources */,
+				EE115FB11A69C16300B53E0C /* Dealer.m in Sources */,
 				EEFD74341A66F63E00D197F4 /* GameScene.m in Sources */,
 				EEB250661A66F952004BE1BA /* Deck.m in Sources */,
+				EE115FAB1A69B80C00B53E0C /* PlayerModel.m in Sources */,
+				EE115FAE1A69C14A00B53E0C /* Player.m in Sources */,
 				EEFD742E1A66F63E00D197F4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
