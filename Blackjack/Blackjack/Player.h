@@ -10,9 +10,7 @@
 
 @interface Player : PlayerModel
 
--(id)initWithDeck:(Deck *)deck;
--(void)checkRules;
+-(id)initWithDeck:(Deck*)deck;
 -(void)drawCard;
--(void)fold;
 
 @end

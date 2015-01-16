@@ -17,6 +17,7 @@
     if (self)
     {
         self.hand = [[Hand alloc] init];
+        self.state = Play;
     }
     
     return self;
@@ -24,9 +25,11 @@
 
 -(void)checkRules
 {
-    if (self.hand.getValue > 21) {
+    if([self.hand getValue] == 21)
+        self.state = Win;
+    
+    if (self.hand.getValue > 21)
         self.state = Loose;
-    }
 }
 
 -(void)drawCard

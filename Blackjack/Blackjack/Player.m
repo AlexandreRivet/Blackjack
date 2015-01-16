@@ -10,38 +10,25 @@
 
 @implementation Player
 
--(id)initWithDeck:(Deck *)deck
+
+-(id)initWithDeck:(Deck*)deck
 {
     self = [super initWithDeck:deck];
     
-    if(self)
+    if( self)
     {
         
     }
-    
+	
     return self;
-}
-
--(void)checkRules
-{
-    
 }
 
 -(void)drawCard
 {
-    Card *card = [self.deck drawCard];
+    Card * card = [self.deck drawCard];
     
     if(card != nil)
-    {
         [self.hand addCard:card];
-        
-        [self checkRules];
-    }
-}
-
--(void)fold
-{
-    [super fold];
 }
 
 @end
