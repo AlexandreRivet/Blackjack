@@ -34,7 +34,7 @@
             {
                 [self.hand addCard:card];
                 
-                if([self.hand getValue] < 21)
+                if([self.hand getValue] >= 17 && [self.hand getValue] < 21)
                    [self fold];
                 
                 [self checkRules];
