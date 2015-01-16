@@ -17,6 +17,7 @@
         self._numberCard = numberCard;
         self._colorCard = colorCard;
         self._indexForValue = 0;
+        self._isClosed = true;
     }
     return self;
 }
@@ -115,6 +116,14 @@
 -(NSString*) description
 {
     return [NSString stringWithFormat:@"%@ %@ : values => (%@)", [self numberCardAsString], [self colorAsString], [self valueAsString]];
+}
+
+-(NSString*) getFilename
+{
+    if (self._isClosed)
+        return [NSString stringWithFormat:@"cover.png"];
+    else
+        return [NSString stringWithFormat:@"%@_%@.png", [self numberCardAsString], [self colorAsString]];
 }
 
 @end

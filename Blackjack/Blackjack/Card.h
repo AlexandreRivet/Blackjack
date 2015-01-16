@@ -22,11 +22,13 @@ typedef enum {
 @property() int _numberCard;
 @property() Color _colorCard;
 @property() int _indexForValue;
+@property() BOOL _isClosed;
 
 -(id) initWithCardNumber:(int) numberCard color:(Color) colorCard;
 -(NSArray*) getValue;
 -(int) getNumberValue;
 -(void) askForUserValue:(int) index;
+-(NSString*) getFilename;
 
 @end
 
