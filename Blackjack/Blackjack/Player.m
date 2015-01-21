@@ -17,7 +17,7 @@
     
     if( self)
     {
-        
+        //Test commit kevin depuis install machin virtuel
     }
 	
     return self;
