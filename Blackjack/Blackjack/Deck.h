@@ -12,10 +12,10 @@
 
 @interface Deck : NSObject
 
-@property() NSMutableArray* _cards;
-@property() NSMutableArray* _discards;
-@property() NSInteger _percentDiscard;
-@property() NSInteger _numberCardInit;
+@property(strong, nonatomic) NSMutableArray* _cards;
+@property(strong, nonatomic) NSMutableArray* _discards;
+@property(assign, nonatomic) NSInteger _percentDiscard;
+@property(assign, nonatomic) NSInteger _numberCardInit;
 
 -(id) initWithCards:(NSMutableArray*) cards;
 -(NSUInteger) getNumberCards;

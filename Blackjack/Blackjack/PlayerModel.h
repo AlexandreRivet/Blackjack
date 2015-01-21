@@ -21,7 +21,7 @@ typedef enum {
 
 @interface PlayerModel : NSObject
 
-@property() PlayerState state;
+@property(assign, nonatomic) PlayerState state;
 @property(weak, nonatomic) Deck* deck;
 @property(strong, nonatomic) Hand* hand;
 

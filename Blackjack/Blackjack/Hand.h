@@ -11,7 +11,7 @@
 
 @interface Hand : NSObject
 
-@property() NSMutableArray* _cards;
+@property(strong, nonatomic) NSMutableArray* _cards;
 
 -(void) addCard:(Card*) card;
 -(NSInteger) getValue;
