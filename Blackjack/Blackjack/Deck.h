@@ -12,17 +12,16 @@
 
 @interface Deck : NSObject
 
-@property(strong, nonatomic) NSMutableArray* _cards;
-@property(strong, nonatomic) NSMutableArray* _discards;
-@property(assign, nonatomic) NSInteger _percentDiscard;
-@property(assign, nonatomic) NSInteger _numberCardInit;
+@property(strong, nonatomic) NSMutableArray* cards;
+@property(assign, nonatomic) NSInteger numberCardInit;
+@property(assign, nonatomic) NSInteger numberCard;
 
 -(id) initWithCards:(NSMutableArray*) cards;
--(NSUInteger) getNumberCards;
 -(Card*) drawCard;
 -(void) shuffle;
 -(void) addCard:(Card*) card withShuffle:(BOOL) isShuffle;
 -(void) addCards:(NSMutableArray*) cards withShuffle:(BOOL) isShuffle;
 -(NSString*) description;
++(Deck*)instanciateDeck;
 
 @end

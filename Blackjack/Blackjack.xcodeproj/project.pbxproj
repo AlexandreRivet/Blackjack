@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC0E37F71A700FB000075B50 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0E37F61A700FB000075B50 /* GameManager.m */; };
 		EE115FAB1A69B80C00B53E0C /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE115FAA1A69B80C00B53E0C /* PlayerModel.m */; };
 		EE115FAE1A69C14A00B53E0C /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = EE115FAD1A69C14A00B53E0C /* Player.m */; };
 		EE115FB11A69C16300B53E0C /* Dealer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE115FB01A69C16300B53E0C /* Dealer.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC0E37F51A700FB000075B50 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
+		EC0E37F61A700FB000075B50 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
 		EE115FA91A69B80C00B53E0C /* PlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerModel.h; sourceTree = "<group>"; };
 		EE115FAA1A69B80C00B53E0C /* PlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerModel.m; sourceTree = "<group>"; };
 		EE115FAC1A69C14A00B53E0C /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				EE115FB01A69C16300B53E0C /* Dealer.m */,
 				EEFD742F1A66F63E00D197F4 /* AppDelegate.h */,
 				EEFD74301A66F63E00D197F4 /* AppDelegate.m */,
+				EC0E37F51A700FB000075B50 /* GameManager.h */,
+				EC0E37F61A700FB000075B50 /* GameManager.m */,
 				EEFD74321A66F63E00D197F4 /* GameScene.h */,
 				EEFD74331A66F63E00D197F4 /* GameScene.m */,
 				EEFD74351A66F63E00D197F4 /* GameScene.sks */,
@@ -258,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC0E37F71A700FB000075B50 /* GameManager.m in Sources */,
 				EEB250651A66F952004BE1BA /* Card.m in Sources */,
 				EEB250691A66F968004BE1BA /* Hand.m in Sources */,
 				EEFD74391A66F63E00D197F4 /* GameViewController.m in Sources */,

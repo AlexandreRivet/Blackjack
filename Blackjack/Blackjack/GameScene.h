@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "GameManager.h"
 
 @interface GameScene : SKScene
 @property(weak, nonatomic) SKLabelNode* _buttonPlay;

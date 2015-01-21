@@ -22,10 +22,9 @@ typedef enum {
 @interface PlayerModel : NSObject
 
 @property(assign, nonatomic) PlayerState state;
-@property(weak, nonatomic) Deck* deck;
 @property(strong, nonatomic) Hand* hand;
 
--(id) initWithDeck:(Deck*)deck;
+-(id) init;
 -(void)checkRules;
 -(void)drawCard;
 -(void)fold;

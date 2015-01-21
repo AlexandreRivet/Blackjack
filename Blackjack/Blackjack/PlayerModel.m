@@ -10,7 +10,7 @@
 
 @implementation PlayerModel
 
--(id) initWithDeck:(Deck*)deck;
+-(id) init;
 {
     self = [super init];
     
@@ -33,7 +33,9 @@
 }
 
 -(void)drawCard
-{}
+{
+    NSAssert(false, @"drawCard not implemented");
+}
 
 -(void)fold
 {

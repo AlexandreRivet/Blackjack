@@ -10,36 +10,42 @@
 
 @implementation Deck
 
--(id) initWithCards:(NSMutableArray*) cards
+-(id)init
 {
-    self._cards = [[NSMutableArray alloc] init];
-    [self._cards addObjectsFromArray:cards];
-    [self shuffle];
+    self = [self init];
     
-    self._discards = [[NSMutableArray alloc] init];
-    
-    self._percentDiscard = 25;
-    self._numberCardInit = [self getNumberCards];
+    if(self != nil)
+    {
+        _cards = [[NSMutableArray alloc] init];
+        _numberCardInit = 0;
+    }
     
     return self;
 }
 
--(NSUInteger) getNumberCards
+-(id) initWithCards:(NSMutableArray*) cards
 {
-    return [self._cards count];
+    self = [self init];
+    
+    if(self != nil)
+    {
+        _cards = [[NSMutableArray alloc] init];
+        [_cards addObjectsFromArray:cards];
+        [self shuffle];
+        
+        _numberCardInit = _cards.count;
+    }
+    
+    return self;
 }
 
 -(Card*) drawCard
 {
-    if ([self._cards count] > 0)
+    if ([_cards count] > 0)
     {
-        Card* c = [self._cards lastObject];
-        [self._discards addObject:c];
-        [self._cards removeLastObject];
-        
-        NSInteger current_percent = (NSInteger) ([self getNumberCards] / self._numberCardInit) * 100;
-        if ( current_percent <= self._percentDiscard)
-            [self._cards addObjectsFromArray:self._discards];
+        Card* c = [_cards lastObject];
+        [_cards removeObject:c];
+        --_numberCard;
         
         return c;
     }
@@ -49,14 +55,14 @@
 
 -(void) shuffle
 {
-    NSUInteger count = [self._cards count];
+    NSUInteger count = [_cards count];
     
     unsigned long indexElement = 0, element = 0;
     for (NSUInteger i = 0; i < count; i++)
     {
         element = count - i;
         indexElement = (arc4random() % element) + i;
-        [self._cards exchangeObjectAtIndex:i withObjectAtIndex:indexElement];
+        [_cards exchangeObjectAtIndex:i withObjectAtIndex:indexElement];
     }
 }
 
@@ -64,7 +70,9 @@
 {
     if (card != nil)
     {
-        [self._cards addObject:card];
+        [_cards addObject:card];
+        ++_numberCard;
+        
         if (isShuffle)
             [self shuffle];
     }
@@ -74,7 +82,10 @@
 {
     if (cards != nil)
     {
-        [self._cards addObjectsFromArray:cards];
+        [_cards addObjectsFromArray:cards];
+        
+        _numberCard += cards.count;
+        
         if (isShuffle)
             [self shuffle];
     }
@@ -82,7 +93,30 @@
 
 -(NSString*) description
 {
-    return [NSString stringWithFormat:@"Deck: %@", self._cards];
+    return [NSString stringWithFormat:@"Deck: %@", _cards];
+}
+
++(Deck*)instanciateDeck
+{
+    NSMutableArray * cards = [[NSMutableArray alloc] init];
+    
+    int numberDeck = 6;
+    
+    for (int i = 0; i < numberDeck; ++i)
+    {
+        for (int color = 0; color <= 3; ++color)
+        {
+            for (int numberCard = 1; numberCard <= 13; ++numberCard)
+            {
+                [cards addObject:[[Card alloc] initWithCardNumber:numberCard color:color]];
+            }
+        }
+    }
+    
+    Deck * deck = [[Deck alloc] initWithCards:cards];
+    [deck shuffle];
+    
+    return deck;
 }
 
 @end
