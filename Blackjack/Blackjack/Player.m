@@ -10,7 +10,6 @@
 
 @implementation Player
 
-
 -(void)drawCard
 {
     
