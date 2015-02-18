@@ -16,6 +16,7 @@
     
     if (self)
     {
+        self.deck = deck;
         self.hand = [[Hand alloc] init];
         self.state = Play;
     }
