@@ -12,10 +12,13 @@
 #import "Card.h"
 #import "Deck.h"
 #import "Hand.h"
+#import "Player.h"
+#import "Looser.h"
 
 @implementation SKScene (Unarchive)
 
 + (instancetype)unarchiveFromFile:(NSString *)file {
+    
     /* Retrieve scene file path from the application bundle */
     NSString *nodePath = [[NSBundle mainBundle] pathForResource:file ofType:@"sks"];
     /* Unarchive the file to an SKScene object */
@@ -50,7 +53,6 @@
     // Ajout de la 2ème carte
     // [h addCard:[d drawCard]];
     // NSLog([NSString stringWithFormat:@"%lu", (unsigned long)[h getValue]]);
-
     
     return scene;
 }
@@ -62,6 +64,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    
+    Player * player = [[Player alloc] init];
+    Looser * looser = [[Looser alloc] init];
+    
+    [player drawCard];
+    [looser drawCard];
+    
+    
+    
 
     // Configure the view.
     SKView * skView = (SKView *)self.view;

@@ -10,25 +10,9 @@
 
 @implementation Player
 
-
--(id)initWithDeck:(Deck*)deck
-{
-    self = [super initWithDeck:deck];
-    
-    if( self)
-    {
-        
-    }
-	
-    return self;
-}
-
 -(void)drawCard
 {
-    Card * card = [self.deck drawCard];
     
-    if(card != nil)
-        [self.hand addCard:card];
 }
 
 @end

@@ -14,10 +14,10 @@
 {
     if (self = [super init])
     {
-        self._numberCard = numberCard;
-        self._colorCard = colorCard;
-        self._indexForValue = 0;
-        self._isClosed = true;
+        _numberCard = numberCard;
+        _colorCard = colorCard;
+        _indexForValue = 0;
+        _isClosed = true;
     }
     return self;
 }
@@ -25,28 +25,28 @@
 -(NSArray*) getValue
 {
 
-    if(self._numberCard >= 10)
+    if(_numberCard >= 10)
         return [[NSArray alloc] initWithObjects: [NSNumber numberWithInt:10], nil];
-    else if(self._numberCard == 1)
+    else if(_numberCard == 1)
         return [[NSArray alloc] initWithObjects: [NSNumber numberWithInt:1], [NSNumber numberWithInt:11], nil];
     else
-        return [[NSArray alloc] initWithObjects: [NSNumber numberWithInt:self._numberCard], nil];
+        return [[NSArray alloc] initWithObjects: [NSNumber numberWithInt:_numberCard], nil];
 }
 
 -(int) getNumberValue
 {
-    return (self._numberCard == 1) ? 2 : 1;
+    return (_numberCard == 1) ? 2 : 1;
 }
 
 -(void) askForUserValue:(int) index
 {
     if (index < [self getNumberValue])
-        self._indexForValue = index;
+        _indexForValue = index;
 }
 
 -(NSString*) numberCardAsString
 {
-    switch (self._numberCard)
+    switch (_numberCard)
     {
         case 1:
             return @"Ace";
@@ -66,14 +66,14 @@
             
             
         default:
-            return [NSString stringWithFormat:@"%d", self._numberCard];
+            return [NSString stringWithFormat:@"%d", _numberCard];
             break;
     }
 }
 
 -(NSString*) colorAsString
 {
-    switch (self._colorCard)
+    switch (_colorCard)
     {
         case Spades:
             return @"Spades";
@@ -120,7 +120,7 @@
 
 -(NSString*) getFilename
 {
-    if (self._isClosed)
+    if (_isClosed)
         return [NSString stringWithFormat:@"cover.png"];
     else
         return [NSString stringWithFormat:@"%@_%@.png", [self numberCardAsString], [self colorAsString]];

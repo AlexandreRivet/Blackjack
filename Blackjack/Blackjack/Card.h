@@ -19,10 +19,10 @@ typedef enum {
 
 @interface Card : NSObject
 
-@property() int _numberCard;
-@property() Color _colorCard;
-@property() int _indexForValue;
-@property() BOOL _isClosed;
+@property(assign, nonatomic) int numberCard;
+@property(assign, nonatomic) Color colorCard;
+@property(assign, nonatomic) int indexForValue;
+@property(assign, nonatomic) BOOL isClosed;
 
 -(id) initWithCardNumber:(int) numberCard color:(Color) colorCard;
 -(NSArray*) getValue;

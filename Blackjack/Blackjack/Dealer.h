@@ -10,7 +10,6 @@
 
 @interface Dealer : PlayerModel
 
--(id)initWithDeck:(Deck *)deck;
 -(void)drawCard;
 
 @end
