@@ -280,8 +280,8 @@
     // Ici ajout dans la main
     [_player.hand addCard:c];
     
-    // Test si c'est un as
-    if ([c numberCard] == 1)
+    // Test si c'est un as,
+    if ([c numberCard] == 1 && [_player.hand getValue:YES] <= 10)
     {
         _currentCard = (int)[_player.hand getNumberCards] - 1;
         UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"Value of Ace" message:[NSString stringWithFormat:@"Score actuel: %ld", (long)[_player.hand getValue:YES] - 1] delegate:self cancelButtonTitle:nil otherButtonTitles:@"1", @"11", nil];
