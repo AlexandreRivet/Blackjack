@@ -259,6 +259,7 @@
 
 -(void) playerDrawFromButton
 {
+    [_drawButton setEnabled:NO];
     [_surrenderButton setEnabled:NO];       // S'il pioche c'est qu'il ne peut plus abandonner
     [self playerDraws];
 }
@@ -627,6 +628,7 @@
                      completion:^(BOOL finished){
                          if (finished && isFlipping)
                              [self flipCard:card];
+                         [_drawButton setEnabled:YES];
                      }];
     
 }
